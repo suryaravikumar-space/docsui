@@ -17,8 +17,8 @@ test.describe("Home page", () => {
     await expect(cta).toHaveAttribute("href", "/docs");
   });
 
-  test("renders the Browse Components link", async ({ page }) => {
-    const link = page.getByRole("link", { name: /browse components/i });
+  test("renders the Components nav link", async ({ page }) => {
+    const link = page.getByRole("link", { name: "/components" });
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute("href", "/components");
   });
@@ -40,10 +40,10 @@ test.describe("Home page", () => {
     await expect(page).toHaveURL(/\/docs/);
   });
 
-  test("navigates to /components when Browse Components is clicked", async ({
+  test("navigates to /components when the nav link is clicked", async ({
     page,
   }) => {
-    await page.getByRole("link", { name: /browse components/i }).click();
+    await page.getByRole("link", { name: "/components" }).click();
     await expect(page).toHaveURL(/\/components/);
   });
 
