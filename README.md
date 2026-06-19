@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/suryaravikumar-space?label=Sponsor&logo=githubsponsors)](https://github.com/sponsors/suryaravikumar-space)
 
-Copy-paste MDX components for documentation sites. Built with React, TypeScript, and Tailwind CSS. Follows the [shadcn/ui](https://ui.shadcn.com) philosophy — components live in your project, not in `node_modules`.
+DocsUI is an open-source component library for rendering AI-generated STEM md content using MDX — works with React, Next.js, and Astro, in both `*.mdx` and `*.tsx` files. Instead of relying on LaTeX, MathJax, PDFs, screenshots, or static HTML, DocsUI provides reusable semantic components that you own, customize, and distribute — built with React, TypeScript, and Tailwind CSS, following the [shadcn/ui](https://ui.shadcn.com) philosophy of components living in your project, not in `node_modules`.
 
 ## Quick Start
 

@@ -16,7 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "DocsUI — Copy-paste MDX components for documentation sites",
+    default:
+      "DocsUI — Components for AI-Generated STEM Markdown Content",
     template: "%s — DocsUI",
   },
   description: siteConfig.description,
@@ -25,8 +26,13 @@ export const metadata: Metadata = {
     "React components",
     "documentation",
     "copy-paste components",
+    "AI-generated content",
+    "Math components",
+    "Physics components",
+    "Chemistry components",
+    "STEM components",
+    "EdTech",
     "Tailwind CSS",
-    "math components",
     "MCP server",
     "remark plugin",
     "shadcn",
@@ -39,12 +45,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "DocsUI — Copy-paste MDX components for documentation sites",
+    title:
+      "DocsUI — Components for AI-Generated STEM Markdown Content",
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "DocsUI — Copy-paste MDX components for documentation sites",
+    title:
+      "DocsUI — Components for AI-Generated STEM Markdown Content",
     description: siteConfig.description,
     creator: "@ravikumarsurya",
   },
