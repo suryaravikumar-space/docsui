@@ -17,7 +17,7 @@ export default function AboutPage() {
           About {siteConfig.name}
         </h1>
         <p className="text-lg text-muted-foreground">
-          Copy-paste MDX components for documentation sites.
+          Semantic MDX components for rendering AI-generated Math, Physics, and Chemistry md content.
         </p>
       </div>
 

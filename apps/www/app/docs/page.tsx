@@ -10,12 +10,12 @@ export function generateMetadata(): Metadata {
   return {
     title: "Introduction",
     description:
-      "Copy-paste MDX components for documentation sites. 50+ components built with React, TypeScript, and Tailwind CSS.",
+      "Semantic MDX components for rendering AI-generated Math, Physics, and Chemistry md content — no LaTeX, MathJax, PDFs, or screenshots — components built with React, TypeScript, and Tailwind CSS.",
     alternates: { canonical: `${siteConfig.url}/docs` },
     openGraph: {
       title: "Introduction — DocsUI",
       description:
-        "Copy-paste MDX components for documentation sites. 50+ components built with React, TypeScript, and Tailwind CSS.",
+        "Semantic MDX components for rendering AI-generated Math, Physics, and Chemistry md content — no LaTeX, MathJax, PDFs, or screenshots — components built with React, TypeScript, and Tailwind CSS.",
       url: `${siteConfig.url}/docs`,
     },
   };

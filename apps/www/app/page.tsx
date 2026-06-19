@@ -1,5 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, Coins, Code2, Bot, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Coins,
+  Code2,
+  Bot,
+  ShieldCheck,
+  Package,
+  Puzzle,
+  Boxes,
+  Rocket,
+  Sigma,
+} from "lucide-react";
 import type { CSSProperties } from "react";
 import { ComponentShowcase } from "@/components/component-showcase";
 
@@ -70,8 +81,8 @@ const floatingSymbols = [
 export default function Home() {
   return (
     <main className="flex-1 overflow-x-hidden">
-      {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-      <section className="relative flex min-h-[33vh] flex-col items-center justify-center gap-4 px-4 py-10 text-center md:min-h-[33vh] md:py-12">
+      {/* ── Hero + Ecosystem (shared background) ─────────────────────────────── */}
+      <div className="relative">
         {/* Grid background */}
         <div className="hero-grid-bg" aria-hidden />
 
@@ -120,47 +131,98 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Fixed-width content column */}
-        <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-4">
-          {/* Pulse pill badge */}
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-green-500/25 bg-green-500/5 px-4 py-1.5 text-sm text-green-600 backdrop-blur-sm dark:text-green-400">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-            </span>
-            LLM writes Markdown. You get components.
+        {/* ── Hero ──────────────────────────────────────────────────────────── */}
+        <section className="flex flex-col items-center justify-center gap-4 px-4 pt-10 pb-4 text-center md:pt-12 md:pb-6">
+          {/* Fixed-width content column */}
+          <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-4">
+            {/* Pulse pill badge */}
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-green-500/25 bg-green-500/5 px-4 py-1.5 text-sm text-green-600 backdrop-blur-sm dark:text-green-400">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                </span>
+                LLM writes Markdown. You get components.
+              </div>
+
+            {/* Headline */}
+            <h1 className="max-w-[640px] text-2xl font-bold leading-tight tracking-[-0.03em] md:text-4xl lg:leading-[1.05]">
+              Transform LLM Markdown into{" "}
+              <span className="gradient-text">Rich, Interactive UI</span>
+            </h1>
+
+            {/* Sub-headline */}
+            <p className="max-w-[560px] text-sm text-muted-foreground sm:text-base">
+              DocsUI is a token-efficient bridge between any LLM and React.
+              The AI writes plain Markdown — your pipeline transforms it into
+              beautiful, interactive components automatically.
+            </p>
           </div>
+        </section>
 
-          {/* Headline */}
-          <h1 className="max-w-[640px] text-2xl font-bold leading-tight tracking-[-0.03em] md:text-4xl lg:leading-[1.05]">
-            Transform LLM Markdown into{" "}
-            <span className="gradient-text">Rich, Interactive UI</span>
-          </h1>
-
-          {/* Sub-headline */}
-          <p className="max-w-[560px] text-sm text-muted-foreground sm:text-base">
-            DocsUI is a token-efficient bridge between any LLM and React. The AI
-            writes plain Markdown — your pipeline transforms it into beautiful,
-            interactive components automatically.
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/docs"
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-green-400 to-green-600 px-6 font-mono text-sm font-semibold text-green-950 shadow-[0_8px_32px_-8px_rgba(34,197,94,0.55)] transition-all hover:brightness-110"
-            >
-              Get Started <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/components"
-              className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/20 bg-green-500/5 px-6 font-mono text-sm font-semibold text-green-600 backdrop-blur-sm transition-all hover:border-green-500/40 hover:bg-green-500/10 dark:text-green-400"
-            >
-              Browse Components
-            </Link>
+        {/* ── Ecosystem strip ──────────────────────────────────────────────── */}
+        <section className="container pt-2 pb-10 md:pb-14">
+          <div className="mx-auto ">
+            <p className="mb-6 text-center font-mono text-xs font-medium uppercase tracking-widest text-green-600 dark:text-green-500">
+              {"// "}ecosystem
+            </p>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                {
+                Icon: Rocket,
+                title: "Get Started",
+                desc: "npx docsui-cli init",
+                href: "/docs",
+              },
+              {
+                Icon: Package,
+                title: "npm Package",
+                desc: "docsui-cli",
+                href: "https://www.npmjs.com/package/docsui-cli",
+              },
+              {
+                Icon: Bot,
+                title: "MCP Server",
+                desc: "Registry-aware AI",
+                href: "/docs/integration/mcp",
+              },
+              {
+                Icon: Puzzle,
+                title: "VS Code Extension",
+                desc: "Snippets & IntelliSense",
+                href: "https://marketplace.visualstudio.com/items?itemName=psyphy.vscode-psyphy",
+              },
+              // {
+              //   Icon: Sigma,
+              //   title: "STEM Components",
+              //   desc: "Math, Physics & Chemistry",
+              //   href: "/docs/components/symbol-browser",
+              // },
+              // {
+              //   Icon: Boxes,
+              //   title: "Components",
+              //   desc: "Components for Markdown",
+              //   href: "/components",
+              // },
+            ].map(({ Icon, title, desc, href }) => {
+              const external = href.startsWith("http");
+              return (
+                <Link
+                  key={title}
+                  href={href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noreferrer" : undefined}
+                  className="group flex flex-col items-center gap-2 rounded-xl border border-white/8 bg-white/[0.03] px-4 py-5 text-center backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-green-500/40 hover:shadow-[0_0_0_1px_rgba(34,197,94,0.25),0_0_32px_-8px_rgba(34,197,94,0.20)] dark:border-white/5"
+                >
+                  <Icon className="h-5 w-5 text-green-600 dark:text-green-400" />
+                  <p className="text-sm font-semibold">{title}</p>
+                  <p className="text-xs text-muted-foreground">{desc}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
-      </section>
+        </section>
+      </div>
 
       {/* ── Component showcase ───────────────────────────────────────────────── */}
       <ComponentShowcase />
