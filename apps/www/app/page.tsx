@@ -507,7 +507,8 @@ export default function Home() {
             <span className="gradient-text">You get components.</span>
           </h2>
           <p className="max-w-[600px] text-lg text-muted-foreground">
-            Start with one command. Works with Next.js, Astro, and Vite React.
+            Start with one command. Works with Next.js, Astro, and Vite
+            React.
           </p>
           <code className="rounded-lg border border-green-500/20 bg-green-500/5 px-6 py-3 font-mono text-sm text-green-600 dark:text-green-400">
             npx docsui-cli@latest init
