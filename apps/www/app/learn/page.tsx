@@ -19,7 +19,9 @@ export default function LearnPage() {
             <p className="leading-7">
               DocsUI is a collection of beautifully designed, accessible, and
               customizable components for MDX-based documentation sites. Built
-              with React, TypeScript, and Tailwind CSS.
+              with React, TypeScript, and Tailwind CSS — works with React,
+              Next.js, and Astro, in both <code>.mdx</code> and{" "}
+              <code>.tsx</code> files.
             </p>
           </section>
 

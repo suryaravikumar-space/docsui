@@ -74,7 +74,7 @@ export default function CommunityPage() {
                 </div>
               </a>
               <a
-                href="https://discord.gg"
+                href="https://discord.gg/zYGqfYsQb"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="group flex flex-col gap-3 rounded-lg border p-4 transition-colors hover:bg-accent"
