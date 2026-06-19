@@ -16,7 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "DocsUI — Components for AI-Generated Math, Physics & Chemistry Content",
+    default:
+      "DocsUI — Components for AI-Generated STEM Markdown Content",
     template: "%s — DocsUI",
   },
   description: siteConfig.description,
@@ -24,10 +25,12 @@ export const metadata: Metadata = {
     "MDX",
     "React components",
     "documentation",
+    "copy-paste components",
     "AI-generated content",
     "Math components",
     "Physics components",
     "Chemistry components",
+    "STEM components",
     "EdTech",
     "Tailwind CSS",
     "MCP server",
@@ -42,12 +45,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "DocsUI — Components for AI-Generated Math, Physics & Chemistry Content",
+    title:
+      "DocsUI — Components for AI-Generated STEM Markdown Content",
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "DocsUI — Components for AI-Generated Math, Physics & Chemistry Content",
+    title:
+      "DocsUI — Components for AI-Generated STEM Markdown Content",
     description: siteConfig.description,
     creator: "@ravikumarsurya",
   },

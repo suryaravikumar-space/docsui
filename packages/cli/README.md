@@ -1,6 +1,6 @@
 # docsui
 
-DocsUI is an open-source component library for rendering AI-generated Math, Physics, and Chemistry md content using MDX and React — no LaTeX, MathJax, PDFs, or screenshots required. Components including math primitives, data structures, tables, diagrams, and more — built with React, TypeScript, and Tailwind CSS. CLI, MCP server, and remark plugin included.
+DocsUI is an open-source component library for rendering AI-generated STEM md content using MDX — works with React, Next.js, and Astro, in both `*.mdx` and `*.tsx` files. No LaTeX, MathJax, PDFs, or screenshots required. Components including math primitives, data structures, tables, diagrams, and more — built with React, TypeScript, and Tailwind CSS. CLI, MCP server, and remark plugin included.
 
 Follows the [shadcn/ui](https://ui.shadcn.com) philosophy — components are added directly to your project, not installed as a dependency. You own the code.
 

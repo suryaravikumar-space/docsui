@@ -17,7 +17,7 @@ export default function AboutPage() {
           About {siteConfig.name}
         </h1>
         <p className="text-lg text-muted-foreground">
-          Semantic MDX components for rendering AI-generated Math, Physics, and Chemistry md content.
+          Semantic MDX components for rendering AI-generated STEM md content.
         </p>
       </div>
 
