@@ -231,6 +231,10 @@
       "path": "/docs/components/hardware-spec"
     },
     {
+      "title": "Pin Table",
+      "path": "/docs/components/pin-table"
+    },
+    {
       "title": "Privacy Table",
       "path": "/docs/components/privacy-table"
     },
