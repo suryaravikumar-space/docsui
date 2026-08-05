@@ -49,6 +49,7 @@ import PrivacyTableDefault from "@/components/demos/privacy-table-default";
 import InvariantDefault from "@/components/demos/invariant-default";
 import CodeGroupDefault from "@/components/demos/code-group-default";
 import DataTableDefault from "@/components/demos/data-table-default";
+import { PinTableDefault } from "@/components/demos/pin-table-default";
 import PreviewDefault from "@/components/demos/preview-default";
 import RegisterMapDefault from "@/components/demos/register-map-default";
 import MathSolutionDefault from "@/components/demos/math-solution-default";
@@ -97,6 +98,7 @@ const DEMOS: Record<string, React.ComponentType> = {
   "glossary-default": GlossaryDefault,
   "data-type-table-default": DataTypeTableDefault,
   "privacy-table-default": PrivacyTableDefault,
+  "pin-table-default": PinTableDefault,
   "invariant-default": InvariantDefault,
   "code-group-default": CodeGroupDefault,
   "data-table-default": DataTableDefault,

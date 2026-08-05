@@ -1,0 +1,144 @@
+---
+title: Pin Table
+description: Hardware pin mapping table for GPIO headers, UART pins, SPI signal connectors, and board documentation.
+component: pin-table
+published: true
+registryDependencies: ["utils"]
+dependencies: ["clsx", "tailwind-merge"]
+---
+
+## Installation
+
+```bash
+npx docsui-cli@latest add pin-table
+```
+
+## Usage
+
+```tsx
+import { PinTable } from "@/components/mdx/pin-table";
+
+<PinTable
+  title="40-pin GPIO Header"
+  connector="J1"
+  rows={[
+    {
+      pin: 1,
+      signal: "3.3V",
+      type: "POWER",
+      voltage: "3.3V",
+      description: "Power rail",
+    },
+    { pin: 2, signal: "GND", type: "GND", description: "Ground" },
+    {
+      pin: 3,
+      signal: "UART0_TX",
+      type: "OUTPUT",
+      voltage: "3.3V",
+      altFunction: "UART0_TX",
+      description: "Serial transmit",
+    },
+    {
+      pin: 4,
+      signal: "UART0_RX",
+      type: "INPUT",
+      voltage: "3.3V",
+      altFunction: "UART0_RX",
+      description: "Serial receive",
+    },
+    {
+      pin: 5,
+      signal: "SPI0_MOSI",
+      type: "BIDIR",
+      voltage: "3.3V",
+      altFunction: "SPI0_MOSI",
+      description: "Master-out / Slave-in",
+    },
+    {
+      pin: 6,
+      signal: "SPI0_MISO",
+      type: "BIDIR",
+      voltage: "3.3V",
+      altFunction: "SPI0_MISO",
+      description: "Master-in / Slave-out",
+    },
+    { pin: "7-8", signal: "NC", type: "NC", description: "Not connected" },
+  ]}
+  caption="Example GPIO header mapping for embedded board documentation"
+/>;
+```
+
+## Examples
+
+<PinTable
+  title="6-pin serial and SPI header"
+  connector="J2"
+  rows={[
+    {
+      pin: 1,
+      signal: "3.3V",
+      type: "POWER",
+      voltage: "3.3V",
+      description: "Power supply",
+    },
+    { pin: 2, signal: "GND", type: "GND", description: "Ground" },
+    {
+      pin: 3,
+      signal: "UART_TX",
+      type: "OUTPUT",
+      voltage: "3.3V",
+      altFunction: "UART1_TX",
+      description: "Serial transmit",
+    },
+    {
+      pin: 4,
+      signal: "UART_RX",
+      type: "INPUT",
+      voltage: "3.3V",
+      altFunction: "UART1_RX",
+      description: "Serial receive",
+    },
+    {
+      pin: 5,
+      signal: "SPI_SCK",
+      type: "BIDIR",
+      voltage: "3.3V",
+      altFunction: "SPI0_SCK",
+      description: "SPI clock",
+    },
+    {
+      pin: 6,
+      signal: "SPI_CS",
+      type: "OUTPUT",
+      voltage: "3.3V",
+      altFunction: "SPI0_CS",
+      description: "SPI chip select",
+    },
+  ]}
+  caption="Compact serial and SPI header pin assignment"
+/>
+
+## Props
+
+### PinTable
+
+| Prop        | Type       | Default | Description                               |
+| ----------- | ---------- | ------- | ----------------------------------------- |
+| `title`     | `string`   | —       | Optional table title                      |
+| `connector` | `string`   | —       | Optional connector label, e.g. `J1`       |
+| `rows`      | `PinRow[]` | —       | Array of pin mapping rows (required)      |
+| `caption`   | `string`   | —       | Optional caption rendered below the table |
+| `className` | `string`   | —       | Additional CSS classes                    |
+
+### PinRow
+
+| Field         | Type               | Description                                       |
+| ------------- | ------------------ | ------------------------------------------------- |
+| `pin`         | `number \| string` | Pin number or connector label                     |
+| `signal`      | `string`           | Signal name for the pin                           |
+| `type`        | `PinType`          | Pin direction / type                              |
+| `voltage`     | `string`           | Optional pin voltage                              |
+| `altFunction` | `string`           | Optional alternate function or peripheral mapping |
+| `description` | `string`           | Optional human-readable description               |
+
+`PinType` values: `INPUT`, `OUTPUT`, `BIDIR`, `POWER`, `GND`, `NC`.
